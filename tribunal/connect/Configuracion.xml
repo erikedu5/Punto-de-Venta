@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-9"?>
+<provedores>
+    <MYSQL>
+        <WELDMATION>
+            <user>root</user>
+            <password></password>
+            <host>127.0.0.1</host>
+            <db>weldmation</db>
+            <port>3306</port>
+            <domain>.</domain>
+            <descipcion>
+                configuracion para poder realizar la conexion de la base de datos 
+                del expediente electronico
+            </descipcion>
+        </WELDMATION>
+    </MYSQL>
+</provedores>

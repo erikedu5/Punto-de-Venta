@@ -1,0 +1,37 @@
+<?php
+include "asterisk.php";
+
+if (isset($_POST["txtCelular"])) {
+    $celular = $_POST["txtCelular"];
+    $celular = explode(',', $celular);
+
+    if (count($celular) > 0) {
+        if (substr($celular[0], 3) == "722") {
+            $celular = "044" . $celular[0];
+        } else {
+            $celular = "045" . $celular[0];
+        }
+    } else {
+        if (substr($celular, 3) == "722") {
+            $celular = "044" . $celular;
+        } else {
+            $celular = "045" . $celular;
+        }
+    }
+
+    @$asterisk2 = new asterisk2("10.22.165.2", $celular, "../llamadas/", "tmp" . date(YmdHis) . ".txt");
+    unset($_POST);
+}
+?>
+
+
+<html>
+    <head>
+        <title>Fromulario de captura</title>
+    </head>
+
+    <form name="frmCaptura" action="frmCaptura.php" method="POST">
+        <input type="text" name="txtCelular" id="txtCelular" value="7224292372" maxlength="15" size="15">
+        <input type="submit" value="Enviar">
+    </form>
+</html>

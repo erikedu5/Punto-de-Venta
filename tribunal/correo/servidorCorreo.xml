@@ -1,0 +1,13 @@
+<Datos>
+<Correo nombre="cateos">
+                <CorreoRemite>notificacion.penal@pjedomex.gob.mx</CorreoRemite>
+                <Subject>NOTIFICACION CATEO</Subject>
+                <IpSMTP>187.191.52.102</IpSMTP>
+		<login>notificacion.penal</login>
+                <password></password>
+                <aut>true</aut>
+	        <typeAut>ssl</typeAut> 
+                <PortSMTP>465</PortSMTP>
+        </Correo>
+	
+</Datos>
